@@ -8,7 +8,6 @@ wire       tx, busy;
 wire [7:0] data_out;
 wire       valid;
 
-// TX aur RX directly connected — tx wire seedha rx mein jaati hai
 uart_tx tx_inst (
     .clk(clk), .rst_n(rst_n),
     .start(start), .data_in(data_in),
@@ -55,7 +54,7 @@ initial begin
     $finish;
 end
 
-// RX ne kya receive kiya — automatically print hoga
+
 always @(posedge clk) begin
     if (valid)
         $display("Received: %h (%c)", data_out, data_out);
