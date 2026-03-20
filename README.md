@@ -191,5 +191,7 @@ make mount
 ```bash
 klayout designs/uart_top/runs/RUN_*/results/final/gds/uart_top.gds
 ```
-
+## Author
+Mridul Mor
+GitHub: https://github.com/Mridul-Mor
 ---
