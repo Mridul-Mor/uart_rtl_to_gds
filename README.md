@@ -56,6 +56,17 @@ The `rx` input crosses from an external clock domain into the internal `clk` dom
 
 ---
 
+## Verification
+
+The design was verified using a self-checking loopback testbench.
+The string "MRIDUL" (0x4D 0x52 0x49 0x44 0x55 0x4C) was transmitted
+via uart_tx and received by uart_rx. All 6 bytes matched successfully.
+
+Simulation tool: Icarus Verilog
+Waveform viewer: GTKWave
+
+---
+
 ## Post-Implementation Results
 
 | Metric              | Value                        |
@@ -76,7 +87,15 @@ The `rx` input crosses from an external clock domain into the internal `clk` dom
 | LVS Status          | Clean                        |
 
 ---
+## Layout Preview
 
+![GDS Layout](screenshots/gds_layout.png)
+
+## Simulation Waveform
+
+![Waveform](screenshots/simulation_loopback.png)
+
+--- 
 ## RTL to GDS Flow
 
 ```
